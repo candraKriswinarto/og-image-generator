@@ -2,6 +2,8 @@ import { deploymentURL } from '@/constant/env';
 import { ImageResponse } from '@vercel/og';
 import { NextRequest } from 'next/server';
 
+export const runtime = 'edge';
+
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
